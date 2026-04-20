@@ -25,7 +25,7 @@ export default function Converter() {
     const controller = new AbortController();
     const currentPair = `${from}-${to}`;
 
-    fetch(`https://api.frankfurter.dev/latest?base=${from}&symbols=${to}`, {
+    fetch(`https://api.frankfurter.dev/v1/latest?base=${from}&symbols=${to}`, {
       signal: controller.signal,
     })
       .then((res) => {
